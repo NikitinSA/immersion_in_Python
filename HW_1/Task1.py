@@ -10,7 +10,7 @@ ab = float(input('Введите длину стороны ab: '))
 bc = float(input('Введите длину стороны bc: '))
 ac = float(input('Введите длину стороны ac: '))
 
-if ab == bc and bc == ac:
+if ab == bc == ac:
     print('Треугольник существует и является равносторонним.')
 elif ab == bc or bc == ac or ab == bc:
     print('Треугольник существует и является равнобедренным.')
