@@ -2,9 +2,13 @@
 угадать число за 10 попыток. Программа должна подсказывать 
 «больше» или «меньше» после каждой попытки.'''
 
-TRY = 10
 from random import randint
-num = randint(0, 1000)
+
+TRY = 10
+MIN = 0
+MAX = 1000
+
+num = randint(MIN, MAX)
 count = 0
 for i in range(0, TRY):
     user_num = int(input('Введите число от 0 до 1000: '))
