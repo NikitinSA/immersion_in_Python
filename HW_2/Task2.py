@@ -1,0 +1,40 @@
+'''Напишите программу, которая принимает две строки вида “a/b” - дробь с 
+числителем и знаменателем. Программа должна возвращать сумму и произведение* дробей. 
+Для проверки своего кода используйте модуль fractions.'''
+
+from fractions import Fraction
+
+fraction_1, fraction_2 = input('Введите первую дробь в формате "a/b": '), \
+    input('Введите первую дробь в формате "a/b": ')
+
+numerator_1 = ''
+denominator_1 = ''
+numerator_2 = ''
+denominator_2 = ''
+
+for i in range(len(fraction_1)):
+    if fraction_1[i] != '/' and i < fraction_1.find('/'):
+        numerator_1 += fraction_1[i]
+    elif i > fraction_1.find('/'):
+        denominator_1 += fraction_1[i]
+
+for i in range(len(fraction_2)):
+    if fraction_2[i] != '/' and i < fraction_2.find('/'):
+        numerator_2 += fraction_2[i]
+    elif i > fraction_2.find('/'):
+        denominator_2 += fraction_2[i]
+
+num_1 = int(numerator_1)
+num_2 = int(numerator_2)
+den_1 = int(denominator_1)
+den_2 = int(denominator_2)
+
+if denominator_1 == denominator_2:
+    print(f'{num_1 + num_2}/{den_1}')
+    print(f'{num_1 * num_2}/{den_1 * den_2}')
+else:
+    print(f'{num_1 * den_2 + num_2 * den_1}/{den_1 * den_2}')
+    print(f'{num_1 * num_2}/{den_1 * den_2}')
+    
+print(Fraction(fraction_1) + Fraction(fraction_2))
+print(Fraction(fraction_1) * Fraction(fraction_2))
