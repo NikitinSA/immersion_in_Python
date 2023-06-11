@@ -12,8 +12,8 @@ denominator_1 = ''
 numerator_2 = ''
 denominator_2 = ''
 
-num_1, den_1 = map(int, fraction_1.split('/')
-num_2, den_2 = map(int, fraction_2.split('/')
+num_1, den_1 = map(int, fraction_1.split('/'))
+num_2, den_2 = map(int, fraction_2.split('/'))
 
 if denominator_1 == denominator_2:
     print(f'{num_1 + num_2}/{den_1}')
